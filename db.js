@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
-let pass = process.env.MongoDB;
+
 dbConnect();
 async function dbConnect() {
   try {
-    await mongoose.connect(pass, { useNewUrlParser: true });
+    await mongoose.connect(process.env.MongoDB, { useNewUrlParser: true });
     console.log("Mongo DB Connection success");
   } catch (error) {
     console.log("Mongo DB Connection failed");
