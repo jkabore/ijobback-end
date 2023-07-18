@@ -8,7 +8,13 @@ const jobsRoute = require("./routes/jobsRoutes");
 const userRoute = require("./routes/usersRoutes");
 require("dotenv").config();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: ["https://ijobclient.onrender.com", "http://localhost:3000"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 app.use("/api/jobs", jobsRoute);
 
 app.use("/api/users", userRoute);
