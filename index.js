@@ -10,7 +10,7 @@ const userRoute = require("./routes/usersRoutes");
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://ijobclient.onrender.com"],
+    origin: "https://ijobclient.onrender.com",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
