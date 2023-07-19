@@ -6,7 +6,7 @@ async function dbConnect() {
     await mongoose.connect(process.env.MongoDB, { useNewUrlParser: true });
     console.log("Mongo DB Connection success");
   } catch (error) {
-    console.log("Mongo DB Connection failed");
+    console.log("Mongo DB Connection failed:", error.message);
   }
 }
 
