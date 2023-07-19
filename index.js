@@ -11,8 +11,6 @@ app.use(express.json());
 app.use(
   cors({
     origin: "https://ijobclient.onrender.com",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    optionsSuccessStatus: 200,
   })
 );
 app.use("/api/jobs", jobsRoute);
