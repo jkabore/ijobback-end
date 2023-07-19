@@ -52,7 +52,7 @@ const login = async (req, res) => {
         expiresIn: "8h",
       }
     );
-
+    console.log("token: ", token);
     res.json({ token, user });
   } catch (error) {
     console.log("Error", error);
@@ -76,7 +76,7 @@ const updateUser = async (req, res) => {
 const getAllUsers = async (req, res) => {
   try {
     const users = await User.find({});
-  
+
     res.send(users);
   } catch (error) {
     return res.status(400).json({ error });
