@@ -52,7 +52,7 @@ const login = async (req, res) => {
         expiresIn: "8h",
       }
     );
-    console.log("token: ", token);
+
     res.json({ token, user });
   } catch (error) {
     console.log("Error", error);
