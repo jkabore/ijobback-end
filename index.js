@@ -12,7 +12,6 @@ app.use(
   cors({
     origin: ["https://ijobclient.onrender.com", "http://localhost:3000"],
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
   })
 );
 app.use("/api/jobs", jobsRoute);
