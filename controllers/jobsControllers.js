@@ -86,7 +86,7 @@ const searchJob = async (req, res) => {
   const query = req.params.title;
   console.log("query:", query);
   const searchQuery = new RegExp(query, "i"); // i for case insensitive
-  console.log("searchquery:", searchQuery);
+
   if (searchQuery !== null) {
     try {
       const jobs = await Job.find({ title: { $regex: searchQuery } });
